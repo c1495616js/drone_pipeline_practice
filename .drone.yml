@@ -2,12 +2,15 @@ kind: pipeline
 type: docker
 name: default
 
+clone:
+  disable: true
+
 steps:
-  - name: frontend
-    image: node
+  - name: test_drone
+    image: alpine:3.9
     commands:
-      - npm install
-      - npm run test
+      - echo "show hello world by drone"
+      - echo $(pwd)
 # kind: pipeline
 # type: docker # 在 Docker 內部執行管道命令
 # name: clone # 可自行定義的名稱
