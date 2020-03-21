@@ -13,6 +13,9 @@ describe('Test function "testMe"', function() {
           age: 26
         });
       })
-      .end(done);
+      .end(function(err, res) {
+        if (err) return done(err);
+        done();
+      });
   });
 });
