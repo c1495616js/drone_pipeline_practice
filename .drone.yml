@@ -1,16 +1,26 @@
-pipeline:
-  build:
+kind: pipeline
+type: docker # 在 Docker 內部執行管道命令
+name: clone # 可自行定義的名稱
+
+steps:
+  # 事件一
+  - name: build # 事件一：可自行定義的名稱
     image: node:8.11.3-alpine
     commands:
       - npm install
       - npm test
-  slack:
+  - name: slack
     image: plugins/slack
     webhook: https://hooks.slack.com/services/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
-    channel: docker
+    channel: Github
     template: >
       {{#success build.status}}
         build {{build.number}} succeeded. Good job.
       {{else}}
         build {{build.number}} failed. Fix me please.
       {{/success}}
+trigger: # 觸發 pipeline 條件，分支為 master，且進行 push 行為
+  branch:
+    - master
+  event:
+    - push
