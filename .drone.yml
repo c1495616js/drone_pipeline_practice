@@ -13,7 +13,7 @@ steps:
     image: plugins/slack
     settings:
       webhook: https://hooks.slack.com/services/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
-      channel: GitHub
+      channel: random
       template: >
         {{#success build.status}}
           build {{build.number}} succeeded. Good job.
