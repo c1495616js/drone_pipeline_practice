@@ -1,0 +1,27 @@
+{
+  "name": "drone_pipeline_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c1495616js/drone_pipeline_practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c1495616js/drone_pipeline_practice/issues"
+  },
+  "homepage": "https://github.com/c1495616js/drone_pipeline_practice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}
