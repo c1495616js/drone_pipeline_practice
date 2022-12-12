@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/c1495616js/drone_pipeline_practice#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "expect": "^25.1.0",
